@@ -1,0 +1,42 @@
+Exercise tracker app
+mongodb express cors mongoose
+
+front end 
+
+navbar - Dashboard, Tracker, (login/logout toggle) dont show in login page   
+Home page -  [(loggedin)?Dashboard:login/signup]
+
+Login page - encrypted /login
+Signup Page - /signup (axios post error checking)
+
+Dashboard -Data Presentation (axios graphinglibrary)
+
+linegraph with goal
+
+Tracker -
+Add data{
+	table
+	tr lift tr input [add]
+}
+
+
+backend-
+API get post delete user data for user
+post for login 
+
+
+
+databases 2
+user table {
+	user : String, required: true
+	Pswd : string, required: true
+	user id:
+}
+
+lifts{
+	type: 
+	date
+	number
+	user id:
+}
+
