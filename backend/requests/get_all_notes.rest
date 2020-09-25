@@ -1,8 +1,8 @@
-POST http://localhost:4000/users/register
+GET http://localhost:4000/users/
 Content-Type: application/json
 
   {
-    "user": "nathan8",
+    "user": "nathan12",
     "pswd": "password"
   }
 
