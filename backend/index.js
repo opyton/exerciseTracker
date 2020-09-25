@@ -1,5 +1,8 @@
 const express = require("express");
 const cors = require("cors");
+// const databaseConnect = require("./modules/databaseConnect");
+require("./modules/databaseConnect");
+
 const userController = require("./controllers/usersController");
 const liftController = require("./controllers/liftsController");
 
