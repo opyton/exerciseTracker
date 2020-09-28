@@ -11,4 +11,10 @@ router.post("/register", (req, res) =>
     : res.json("error please enter a unique user and password")
 );
 
+router.post("/login", (req, res) =>
+  req.body.user && req.body.pswd
+    ? userHelper.verifyUser(req, res)
+    : res.status(404).json("error please enter a correct user and password")
+);
+
 module.exports = router;

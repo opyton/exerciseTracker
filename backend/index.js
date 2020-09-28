@@ -1,18 +1,37 @@
 const express = require("express");
 const cors = require("cors");
-// const databaseConnect = require("./modules/databaseConnect");
 require("./modules/databaseConnect");
+
+const cookieParser = require("cookie-parser");
+const jwt = require("jsonwebtoken");
+const jwtKey = "my_secret_key";
+
+const app = express();
+app.use(cors());
+app.use(cookieParser());
+app.use(express.json());
 
 const userController = require("./controllers/usersController");
 const liftController = require("./controllers/liftsController");
 
-const app = express();
-app.use(cors());
-app.use(express.json());
-
 app.use("/users", userController);
 app.use("/lifts", liftController);
-app.use("/", (req, res) => res.send("in root"));
+app.get("/", (req, res) => {
+  if (!req.cookies) {
+    return res.status(401).end();
+  }
+  const token = req.cookies.token;
 
-const PORT = 4000;
+  var payload;
+  try {
+    payload = jwt.verify(token, jwtKey);
+    console.log(payload);
+  } catch (e) {
+    console.log(e);
+    return res.status(400).end();
+  }
+  res.send(`Welcome ` + payload.user.user + "!");
+});
+
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log("connected to port: " + PORT));
