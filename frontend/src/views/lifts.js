@@ -73,7 +73,7 @@ const DisplayLifts = () => {
                     <td>{lift.sets}</td>
                     <td>{lift.total}</td>
                     <td>
-                      {new Date(lift.date).getMonth()}
+                      {new Date(lift.date).getMonth() + 1}
                       {"/"}
                       {new Date(lift.date).getDate()}
                       {"/"}
@@ -107,7 +107,7 @@ const DisplayLifts = () => {
                       <td>{lift.sets}</td>
                       <td>{lift.total}</td>
                       <td>
-                        {new Date(lift.date).getMonth()}
+                        {new Date(lift.date).getMonth() + 1}
                         {"/"}
                         {new Date(lift.date).getDate()}
                         {"/"}
@@ -141,7 +141,7 @@ const DisplayLifts = () => {
                       <td>{lift.sets}</td>
                       <td>{lift.total}</td>
                       <td>
-                        {new Date(lift.date).getMonth()}
+                        {new Date(lift.date).getMonth() + 1}
                         {"/"}
                         {new Date(lift.date).getDate()}
                         {"/"}
@@ -175,7 +175,7 @@ const DisplayLifts = () => {
                       <td>{lift.sets}</td>
                       <td>{lift.total}</td>
                       <td>
-                        {new Date(lift.date).getMonth()}
+                        {new Date(lift.date).getMonth() + 1}
                         {"/"}
                         {new Date(lift.date).getDate()}
                         {"/"}
