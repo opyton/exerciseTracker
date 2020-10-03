@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const mongoConnection = new Promise((resolve, reject) => {
+  //alternate opyton:typotypo
   const mongoDB_user = "user";
   const mongoDB_pswd = "1TxXKyIQ487W5ys1";
   const mongoDB_URI =
@@ -9,7 +10,7 @@ const mongoConnection = new Promise((resolve, reject) => {
     ":" +
     mongoDB_pswd +
     "@cluster0.mnxzn.mongodb.net/test";
-  mongoDB_URI ? resolve(mongoDB_URI) : reject("error");
+  mongoDB_URI ? resolve(mongoDB_URI) : reject("error: invalid uri");
 });
 
 mongoConnection

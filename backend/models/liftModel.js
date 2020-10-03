@@ -2,9 +2,12 @@ const mongoose = require("mongoose");
 
 const liftSchema = mongoose.Schema({
   type: { type: String, required: true },
-  date: { type: Date, default: Date.now },
+  user: { type: String },
+  date: { type: Date },
   lift_amount: { type: Number, required: true },
-  user_id: { type: Number },
+  reps: { type: Number },
+  sets: { type: Number },
+  total: { type: Number },
 });
 
 module.exports = mongoose.model("lifts", liftSchema);

@@ -1,23 +1,64 @@
 GET http://localhost:4000/lifts/
 Content-Type: application/json
 
-  {
-    "type": "Squat",
-    "lift_amount": 200,
-    "user_id": 1
-  }
-
-
 ###
 
 GET http://localhost:4000/users/
 Content-Type: application/json
 
+###
+GET http://localhost:4000/
+
+###
+POST http://localhost:4000/users/register
+Content-Type: application/json
+
   {
-    "type": "Squat",
-    "lift_amount": 200,
-    "user_id": 1
+    "user": "test6",
+    "pswd": "test"
   }
 
 ###
-GET http://localhost:4000/
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+  {
+    "user": "test",
+    "pswd": "test"
+  }
+
+###
+GET http://localhost:4000/lifts/5f737869dbe9fe27a464e873
+###
+PUT http://localhost:4000/lifts/5f737869dbe9fe27a464e873
+Content-Type: application/json
+
+  {
+    "type": "Squat",
+    "lift_amount":40230
+  }
+
+###
+POST http://localhost:4000/users/logout
+Content-Type: application/json
+
+###
+DELETE http://localhost:4000/lifts/5f72481384ea1316ac7ba073
+Content-Type: application/json
+
+###
+GET http://localhost:4000/lifts/5f737869dbe9fe27a464e873
+Content-Type: application/json
+
+###
+POST  http://localhost:4000/lifts/
+Content-Type: application/json
+
+  {
+    "type": "Bench",
+    "lift_amount":420,
+    "user":"nate",
+    "lift_amount":100,
+    "reps":2,
+    "sets":2
+  }
